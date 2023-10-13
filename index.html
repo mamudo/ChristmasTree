@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Christmas Tree</title>
+    <style>
+        main{
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        form{
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        form label{
+            padding-right: 1rem;
+        }
+        .images{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            position: absolute;
+        }
+        .hide{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form>
+            <input type="checkbox" onchange="toggleImage('starsPic')" checked id="stars" name="stars">
+            <label for="stars">Stars</label>
+            <input type="checkbox" onchange="toggleImage('ornamentPic')" checked id="ornament" name="ornament">
+            <label for="ornament">Ornament</label>
+            <input type="checkbox" onchange="toggleImage('snowflakePic')" checked id="snowflake" name="snowflake">
+            <label for="snowflake">Snowflake</label>
+        </form>
+        <div class="images">
+            <img src="img/tree.png" id="treePic">
+            <img src="img/1-stars.png" id="starsPic">
+            <img src="img/2-ornament.png" id="ornamentPic">
+            <img src="img/3-snowflake.png" id="snowflakePic">
+        </div>
+    </main>
+</body>
+<script>
+    function toggleImage(imageId){
+        document.getElementById(imageId).classList.toggle("hide");
+    }
+</script>
+</html>
